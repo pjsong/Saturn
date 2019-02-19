@@ -1,7 +1,8 @@
 FROM mysql:5.7
-
-ENV u=${u}
-ENV p=${p}
+ARG usr=root
+ARG pwd=defaultpass
+ENV u=${usr}
+ENV p=${pwd}
 
 RUN mkdir -p /apps/saturn/bin \
  && mkdir -p /apps/saturn/config
