@@ -1,5 +1,8 @@
 FROM mysql:5.7
 
+ENV u=${u}
+ENV p=${p}
+
 RUN mkdir -p /apps/saturn/bin \
  && mkdir -p /apps/saturn/config
 
@@ -8,4 +11,5 @@ ADD ./saturn-console.sql /apps/saturn/config/saturn-console.sql
 
 RUN chmod +x /apps/saturn/bin/saturn-db.sh
 
-CMD ["/apps/saturn/bin/saturn-db.sh"]
+
+CMD ["/apps/saturn/bin/saturn-db.sh", "$u", "$p"]
