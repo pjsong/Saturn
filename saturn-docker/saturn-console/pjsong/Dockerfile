@@ -1,6 +1,6 @@
 FROM java:8
 
-ARG SATURN_CONSOLE_DOWNLOAD_URL=https://oss.sonatype.org/service/local/artifact/maven/content?r=release&g=com.vip.saturn&a=saturn-console&c=exec&v=3.1.0
+ARG SATURN_CONSOLE_DOWNLOAD_URL=https://oss.sonatype.org/service/local/artifact/maven/content?r=releases&g=com.vip.saturn&a=saturn-console&c=exec&v=3.1.0
 
 RUN wget ${SATURN_CONSOLE_DOWNLOAD_URL} -O saturn-console.jar
 
