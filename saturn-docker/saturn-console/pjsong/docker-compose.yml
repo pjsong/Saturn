@@ -1,5 +1,5 @@
 version: '2'
-# ip=172.19.0.3 dbip=172.19.0.2 pwd=defaultpass docker-compose up -d
+# ip=172.19.0.3 dbip=172.19.0.2 usr=console pwd=defaultpass docker-compose up -d
 
 services:
   console:
@@ -12,9 +12,10 @@ services:
     networks:
       saturn-network:
         ipv4_address: ${ip}
-  environment:
-    - DB_IP ${dbip}
-    - DB_PASSWOR ${pwd}
+    environment:
+      - DB_IP=${dbip}
+      - DB_USERNAME=${usr}
+      - DB_PASSWOR=${pwd}
 networks:
   saturn-network:
     external: true
