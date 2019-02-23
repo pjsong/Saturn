@@ -12,4 +12,4 @@ ENV DB_PASSWOR defaultpass
 
 EXPOSE 9088
 
-CMD ["java", "-DSATURN_CONSOLE_DB_URL=${DB_URL}", "-DSATURN_CONSOLE_DB_USERNAME=${DB_USERNAME}", "-DSATURN_CONSOLE_DB_PASSWORD=${DB_PASSWOR}", "-Dsaturn.stdout=true", "-Dsaturn.embeddedZk=true", "-jar", "saturn-console.jar"]
+CMD ["java", "-Dauthentication.enabled=true","-Dauthentication.enabled.default=true", "-DSATURN_CONSOLE_DB_URL=${DB_URL}", "-DSATURN_CONSOLE_DB_USERNAME=${DB_USERNAME}", "-DSATURN_CONSOLE_DB_PASSWORD=${DB_PASSWOR}", "-Dsaturn.stdout=true", "-Dsaturn.embeddedZk=true", "-jar", "saturn-console.jar"]
