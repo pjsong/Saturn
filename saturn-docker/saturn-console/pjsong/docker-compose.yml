@@ -1,20 +1,20 @@
 version: '2'
-# ip=172.19.0.3 docker-compose up -d
+# ip=172.19.0.3 dbip=172.19.0.2 pwd=defaultpass docker-compose up -d
 
 services:
   console:
     image: saturn/saturn-console
     container_name: saturn_console 
     restart: always
-    links:
-      - db
     ports:
       - 9088:9088
       - 2181:2181
     networks:
       saturn-network:
         ipv4_address: ${ip}
-
+  environment:
+    - DB_IP ${dbip}
+    - DB_PASSWOR ${pwd}
 networks:
   saturn-network:
     external: true

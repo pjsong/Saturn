@@ -1,11 +1,12 @@
 FROM java:8
 
-ARG SATURN_CONSOLE_DOWNLOAD_URL
+ARG SATURN_CONSOLE_DOWNLOAD_URL=https://oss.sonatype.org/service/local/artifact/maven/content?r=release&g=com.vip.saturn&a=saturn-console&c=exec&v=3.1.0
 
 RUN wget ${SATURN_CONSOLE_DOWNLOAD_URL} -O saturn-console.jar
 
 ENV TZ "Asia/Shanghai"
-ENV DB_URL jdbc:mysql://db:3306/saturn_console
+ENV DB_IP 172.19.0.2
+ENV DB_URL jdbc:mysql://${DB_IP}:3306/saturn_console
 ENV DB_USERNAME root
 ENV DB_PASSWOR defaultpass
 
