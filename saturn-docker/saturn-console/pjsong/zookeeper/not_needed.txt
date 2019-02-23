@@ -1,0 +1,1 @@
+after create zk in console, telnet console 2181 works, install zk not needed.
