@@ -1,6 +1,7 @@
 version: '2'
 #https://docs.docker.com/samples/library/mysql
-#pwd=pengeldotcN8 port=8305 docker-compose up -d
+#pwd=pengeldotcN8 port=8305 ip=172.19.0.2 docker-compose up -d
+# no default value, problem
 
 services:
   db:
@@ -18,7 +19,7 @@ services:
       - saturn_db:/var/lib/mysql
     networks:
       saturn-network:
-        ipv4_address: 172.19.0.2
+        ipv4_address: ${ip}
 
 networks:
   saturn-network:
