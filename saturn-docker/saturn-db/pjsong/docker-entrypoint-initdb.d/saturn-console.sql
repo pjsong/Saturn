@@ -442,8 +442,8 @@ INSERT INTO `role_permission`(`role_key`, `permission_key`) VALUES('namespace_ad
 INSERT INTO `role_permission`(`role_key`, `permission_key`) VALUES('namespace_admin', 'alarmCenter:setTimeout4AlarmJobRead');
 
 #data
-INSERT INTO `zk_cluster_info`(`zk_cluster_key`, `alias`, `connect_string`) VALUES('cluster1', '集群1', 'console:2181');
-INSERT INTO `namespace_zkcluster_mapping`(`namespace`, `name`, `zk_cluster_key`) VALUES('saturn-it.vip.com', '业务组', 'cluster1');
+INSERT INTO `zk_cluster_info`(`zk_cluster_key`, `alias`, `connect_string`) VALUES('cluster1', 'cluster1', 'console:2181');
+INSERT INTO `namespace_zkcluster_mapping`(`namespace`, `name`, `zk_cluster_key`) VALUES('saturn-it.vip.com', 'biz group', 'cluster1');
 INSERT INTO sys_config(property,value) VALUES('CONSOLE_ZK_CLUSTER_MAPPING','default:cluster1');
 INSERT INTO `namespace_info`(`namespace`) VALUES('saturn-it.vip.com');
 
