@@ -26,4 +26,4 @@ networks:
     external: true
 
 volumes:
-    saturn_db:
+  saturn_db:

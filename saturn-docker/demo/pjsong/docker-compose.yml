@@ -1,0 +1,10 @@
+version: '2'
+services:
+  demo-init:
+    image: saturn/demo-init
+    container_name: demo-init
+    volumes: 
+      - saturn-executor:/saturn-executor/apps
+
+volumes:
+  saturn-executor:
